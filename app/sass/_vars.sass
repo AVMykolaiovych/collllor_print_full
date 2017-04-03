@@ -1,0 +1,53 @@
+@import "bourbon"
+
+$helvetica_regular: "helvetica_regular", sans-serif
+$helvetica_light: "helvetica_light", sans-serif
+$helvetica_bold: "helvetica_bold", sans-serif
+$background_color: linear-gradient(to right, #01b0dd 0%,#196ebd 100%)
+$sup-background_color: linear-gradient(to right, #ffc600 0%,#ff6e02 100%)
+$main_btn: rgb(255, 142, 65)
+
+@mixin transition
+	-webkit-transition: 0.4s ease
+	-moz-transition: 0.4s ease
+	-ms-transition: 0.4s ease
+	-o-transition: 0.4s ease
+	transition: 0.4s ease
+
+@mixin placeholder
+	&[type='text']::-webkit-input-placeholder
+		color: #767676
+	&[type='text']::-moz-placeholder
+		color: #767676
+	&[type='text']:-moz-placeholder
+		color: #767676
+	&[type='text']:-ms-input-placeholder
+		color: #767676
+	&[type='text']::-webkit-input-placeholder
+		color: #767676
+	&[type='text']::-webkit-input-placeholder
+		color: #767676
+	&[type='text']::-moz-placeholder
+		color: #767676
+	&[type='text']:-moz-placeholder
+		color: #767676
+	&[type='text']:-moz-placeholder
+		color: #767676
+	&[type='text']:-ms-input-placeholder
+		color: #767676
+	&:focus::-webkit-input-placeholder
+		color: transparent
+	&:focus::-moz-placeholder
+		color: transparent
+	&:focus:-moz-placeholder
+		color: transparent
+	&:focus:-ms-input-placeholder
+		color: transparent
+	&::-webkit-input-placeholder
+		color: #c0d3cd
+	&::-moz-placeholder
+		color: #c0d3cd /* Firefox 19+ */
+	&:-moz-placeholder
+		color: #c0d3cd /* Firefox 18- */
+	&:-ms-input-placeholder
+		color: #c0d3cd
