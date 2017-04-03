@@ -9,20 +9,32 @@
 
 
 *::-webkit-input-placeholder
-	color: #666
-	opacity: 1
+	color: rgb(0, 0, 0)
+	opacity: 0.44
+*:focus::-webkit-input-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
 
 *:-moz-placeholder
-	color: #666
-	opacity: 1
+	color: rgb(0, 0, 0)
+	opacity: 0.44
+*:focus:-moz-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
 
 *::-moz-placeholder
-	color: #666
-	opacity: 1
+	color: rgb(0, 0, 0)
+	opacity: 0.44
+*:focus::-moz-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
 
 *:-ms-input-placeholder
-	color: #666
-	opacity: 1
+	color: rgb(0, 0, 0)
+	opacity: 0.44
+*:focus:-ms-input-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
 
 a
 	text-decoration: none
@@ -53,6 +65,12 @@ body
 	overflow-x: hidden
 	height: 100vh
 
+h1, h2
+	padding: 0
+	margin: 0
+	font-family: $helvetica_bold
+	color: rgb(255, 255, 255)
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -70,16 +88,63 @@ body
 .header
 	background: rgb(255, 255, 255)
 	position: relative
+	&__logo
+		line-height: 71px
 	&__form
 		display: inline-block
+		position: relative
+		margin-left: 130px
+		&-label
+			font-size: 15px
+			color: rgba(0, 0, 0, .44)
+			text-transform: uppercase
+			margin-right: 8px
 		&-input
-			&:before
-				content: '\e800'
-				font-size: 10px			
+			text-indent: 35px
+			width: 235px
+			height: 30px
+			border: 1px solid rgb(226, 222, 222)
+		&-mail
+			position: absolute
+			top: 9px
+			left: 106px
+			color: rgba(0, 0, 0, .44)
+			font-size: 13px
+		&-button
+			position: absolute
+			width: 16px
+			height: 16px	
+			top: 8px
+			left: 304px
+			border: none
+			border-radius: 50%
+			background-color: rgb(244, 87, 72)
+			&:hover, :focus, :active
+				outline: none
+		&-btn
+			display: inline-block
+			vertical-align: middle
+			margin-top: -6px
+			font-size: 18px
+			font-weight: 700
+			color: rgb(255, 255, 255)
 	&__link
-		line-height: 43px
-		border-left: 2px solid rgb(85, 85, 85)
+		line-height: 71px
+		border-left: 2px solid rgba(0, 0, 0, .44)
 		padding-left: 15px
 		margin-left: 20px
+/*End of Header styles*/
 
+/*Main Styles*/
+.main
+	text-align: center
+	&__heading
+		font-size: 37px	
+		padding: 170px 0 30px
+		letter-spacing: 3px 
+	&__subheading
+		font-size: 19px
+		padding-bottom: 35px
+		letter-spacing: 1px
+		
 @import "media" // Всегда в конце
