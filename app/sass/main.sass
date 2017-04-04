@@ -165,10 +165,14 @@ h1, h2
 			color: rgb(255, 255, 255)
 			font-family: $helvetica_light
 			text-transform: uppercase
-			//border-radius: 50px 0 0 50px
 			&:first-of-type
 				border-radius: 50px 0 0 50px
 			&:last-of-type
 				border-radius: 0 50px 50px 0
+			&:hover, &:focus, &:active
+				background-color: rgba(255, 255, 255, 0.5)
+		&-check:checked + .main__form-radio
+			background-color: rgba(255, 255, 255, 0.5)
+	
 @import "media"
 // Всегда в конце
