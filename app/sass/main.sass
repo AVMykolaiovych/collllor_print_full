@@ -146,19 +146,29 @@ h1, h2
 
 /*Main Styles*/
 .main
-	//&__content
-	//	display: flex
-	//	flex-direction: column
-	//	justify-content: center
+	margin-top: 25vh
+	text-align: center
 	&__heading
 		font-weight: 700
 		font-size: 2.313em
-		//padding: 170px 0 30px
 		letter-spacing: 3px
 	&__subheading
+		padding-top: 28px
 		font-size: 1.188em
-		//padding-bottom: 35px
 		letter-spacing: 1px
-
+	&__form
+		padding-top: 36px
+		&-radio
+			margin-left: -5px
+			padding: 12px
+			border: 1px solid rgba(255, 255, 255, 0.5)
+			color: rgb(255, 255, 255)
+			font-family: $helvetica_light
+			text-transform: uppercase
+			//border-radius: 50px 0 0 50px
+			&:first-of-type
+				border-radius: 50px 0 0 50px
+			&:last-of-type
+				border-radius: 0 50px 50px 0
 @import "media"
 // Всегда в конце
