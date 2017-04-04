@@ -7,10 +7,10 @@
 *
 	box-sizing: border-box
 
-
 *::-webkit-input-placeholder
 	color: rgb(0, 0, 0)
 	opacity: 0.44
+
 *:focus::-webkit-input-placeholder
 	opacity: 0
 	transition: opacity 0.3s ease
@@ -18,6 +18,7 @@
 *:-moz-placeholder
 	color: rgb(0, 0, 0)
 	opacity: 0.44
+
 *:focus:-moz-placeholder
 	opacity: 0
 	transition: opacity 0.3s ease
@@ -25,6 +26,7 @@
 *::-moz-placeholder
 	color: rgb(0, 0, 0)
 	opacity: 0.44
+
 *:focus::-moz-placeholder
 	opacity: 0
 	transition: opacity 0.3s ease
@@ -32,6 +34,7 @@
 *:-ms-input-placeholder
 	color: rgb(0, 0, 0)
 	opacity: 0.44
+
 *:focus:-ms-input-placeholder
 	opacity: 0
 	transition: opacity 0.3s ease
@@ -39,15 +42,17 @@
 a
 	text-decoration: none
 	@include transition
-	color: rgb(85, 85, 85)
+	color: rgb(174, 174, 174)
 
 a:hover, a:focus
-	text-decoration: none 
-	color: rgb(159, 159, 159)
+	outline: none
+	text-decoration: none
+	color: rgb(74, 74, 74)
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #666
+
 body input:required:valid,
 body textarea:required:valid
 	color: #666
@@ -68,7 +73,7 @@ body
 h1, h2
 	padding: 0
 	margin: 0
-	font-family: $helvetica_bold
+	font-family: Arial, sans-serif
 	color: rgb(255, 255, 255)
 
 .img-responsive
@@ -76,11 +81,14 @@ h1, h2
 	max-width: 100%
 	height: auto
 
+.inline-right
+	text-align: right
+
 /*Sup-background styles*/
 .sup-background
 	position: absolute
 	width: 100%
-	height: 100%
+	height: 100vh
 	background: $background_color
 /*End of sup-background styles*/
 
@@ -93,58 +101,64 @@ h1, h2
 	&__form
 		display: inline-block
 		position: relative
-		margin-left: 130px
+		font-family: Arial, sans-serif
+		color: rgb(174, 174, 174)
 		&-label
-			font-size: 15px
-			color: rgba(0, 0, 0, .44)
+			font-size: 0.938em
 			text-transform: uppercase
 			margin-right: 8px
+		&-subscribe
+			display: none
 		&-input
-			text-indent: 35px
+			padding-left: 35px
 			width: 235px
 			height: 30px
-			border: 1px solid rgb(226, 222, 222)
-		&-mail
-			position: absolute
-			top: 9px
-			left: 106px
-			color: rgba(0, 0, 0, .44)
-			font-size: 13px
+			font-size: 0.875em
+			color: rgb(74, 74, 74)
+			border: 1px solid rgb(174, 174, 174)
+			background-image: url('../img/icon-mail.svg')
+			background-position: 10px 7.5px
+			background-repeat: no-repeat
+			&:focus, &:active
+				outline: none
 		&-button
 			position: absolute
-			width: 16px
-			height: 16px	
-			top: 8px
+			padding: 0
+			height: 28px
+			line-height: 27px
+			width: 24px
+			top: 1px
 			left: 304px
 			border: none
-			border-radius: 50%
-			background-color: rgb(244, 87, 72)
-			&:hover, :focus, :active
+			background-color: rgb(255, 255, 255)
+			&:hover, &:focus, &:active
 				outline: none
 		&-btn
-			display: inline-block
-			vertical-align: middle
-			margin-top: -6px
-			font-size: 18px
-			font-weight: 700
-			color: rgb(255, 255, 255)
+			font-size: 0.813em
+			color: rgb(244, 87, 72)
 	&__link
 		line-height: 71px
-		border-left: 2px solid rgba(0, 0, 0, .44)
+		border-left: 2px solid rgb(174, 174, 174)
+		color: rgb(174, 174, 174)
 		padding-left: 15px
 		margin-left: 20px
 /*End of Header styles*/
 
 /*Main Styles*/
 .main
-	text-align: center
+	//&__content
+	//	display: flex
+	//	flex-direction: column
+	//	justify-content: center
 	&__heading
-		font-size: 37px	
-		padding: 170px 0 30px
-		letter-spacing: 3px 
+		font-weight: 700
+		font-size: 2.313em
+		//padding: 170px 0 30px
+		letter-spacing: 3px
 	&__subheading
-		font-size: 19px
-		padding-bottom: 35px
+		font-size: 1.188em
+		//padding-bottom: 35px
 		letter-spacing: 1px
-		
-@import "media" // Всегда в конце
+
+@import "media"
+// Всегда в конце

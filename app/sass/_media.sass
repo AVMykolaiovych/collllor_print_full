@@ -6,24 +6,43 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
 	/**/
-	.header__form
-		margin-left: 30px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
 	/**/
-	.header__form
-		margin-left: 50px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 	/**/
-	.header__logo
-		width: 182px
-		margin: auto
+	body
+		font-size: 14px
+	.header
+		&__form
+			width: 73%
+			&-label
+				display: none
+			&-mail
+				left: 40px
+			&-subscribe
+				display: inline-block
+				font-size: 1.375em
+			&-input
+				padding-left: 30px
+				width: 28px
+				transition: width 0.4s ease-in-out
+				&:focus
+					width: 100%
+			&-button
+				display: none
+		&__link
+			margin-left: 0
+
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+	body
+		font-size: 12px
 	/**/
 
 /* Custom, iPhone Retina */
