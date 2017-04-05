@@ -49,6 +49,9 @@ a:hover, a:focus
 	text-decoration: none
 	color: rgb(74, 74, 74)
 
+button
+	outline: none
+
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #666
@@ -173,6 +176,27 @@ h1, h2
 				background-color: rgba(255, 255, 255, 0.5)
 		&-check:checked + .main__form-radio
 			background-color: rgba(255, 255, 255, 0.5)
+		&-scanning
+			display: inline-block
+			text-align: center
+			margin-top: 56px
+			font-size: 1.5em
+			font-family: $helvetica_bold
+			color: rgb(255, 255, 255)
+			background-color: $main_btn
+			border: 1px outset $main_btn
+			border-radius: 3px
+			line-height: 65px
+			padding-left: 60px
+			padding-right: 32px
+			transition-duration: 0.4s
+			&:hover
+				background-color: rgb(255,126,65)
+		&-sweep
+			width: 53px
+			height: 53px
+			padding-left: 10px
+			margin-top: -7px
 		&-span
 			display: inline-block
 			padding: 5px
