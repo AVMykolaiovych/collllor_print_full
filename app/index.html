@@ -60,7 +60,7 @@
         <form class="main__form" action="#">
             <div class="row" style="margin-bottom: 50px">
                 <input class="main__form-check hidden" type="radio" name="option" value="printing" id="printing">
-                <label class="main__form-radio" for="printing">Printing <span>60%</span></label>
+                <label class="main__form-radio" for="printing">Printing <span class="main__form-span">60%</span></label>
 
                 <input class="main__form-check hidden" type="radio" name="option" value="packing" id="packing">
                 <label class="main__form-radio" for="packing">Packing</label>
@@ -68,33 +68,26 @@
                 <input class="main__form-check hidden" type="radio" name="option" value="signage" id="signage">
                 <label class="main__form-radio" for="signage">Signage</label>
 
-                <input class="main__form-check hidden" type="radio" name="option" value="large-format" id="large-format">
+                <input class="main__form-check hidden" type="radio" name="option" value="large-format"
+                       id="large-format">
                 <label class="main__form-radio" for="large-format">Large Format</label>
 
                 <input class="main__form-check hidden" type="radio" name="option" value="3d" id="3d">
                 <label class="main__form-radio" for="3d">3D</label>
             </div>
             <div class="row">
-                <select>
-                    <option value="booklets">Booklets</option>
-                    <option value="book">Book</option>
-                </select>
-                <select>
-                    <option value="booklets">1x1</option>
-                    <option value="book">2x2</option>
-                </select>
-                <select>
-                    <option value="booklets">100pt gloss book</option>
-                    <option value="book">200pt gloss book</option>
-                </select>
-                <select>
-                    <option value="booklets">Aq</option>
-                    <option value="book">Bq</option>
-                </select>
-                <select>
-                    <option value="booklets">Tri-Fold</option>
-                    <option value="book">One-Fold</option>
-                </select>
+                <label for="selectSubCategory">Sub-category</label>
+                <label for="selectSize">Size</label>
+                <label for="selectMaterial">Material</label>
+                <label for="selectFinish">Finish</label>
+                <label for="selectMore">More</label>
+            </div>
+            <div class="row">
+                <input id="selectSubCategory" type="text" placeholder="Booklets">
+                <input id="selectSize" type="text" placeholder="1x1">
+                <input id="selectMaterial" type="text" placeholder="100pt gloss book">
+                <input id="selectFinish" type="text" placeholder="Aq">
+                <input id="selectMore" type="text" placeholder="Tri-Fold">
             </div>
             <div class="row">
                 <input type="checkbox" id="result" value="result" checked>
@@ -107,8 +100,7 @@
     </div>
 </section>
 
-
 <script src="js/scripts.min.js"></script>
-
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 </html>
