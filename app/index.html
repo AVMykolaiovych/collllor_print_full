@@ -27,7 +27,7 @@
 </head>
 
 <body>
-<!--<div class="sup-background"></div>-->
+<div id="blueBg" class="sup-background"></div>
 <header class="header">
     <div class="container">
         <div class="row">
@@ -58,7 +58,7 @@
             </div>
         </div>
         <form class="main__form" action="#">
-            <div class="row" style="margin-bottom: 50px">
+            <div>
                 <input class="main__form-check hidden" type="radio" name="option" value="printing" id="printing">
                 <label class="main__form-radio" for="printing">Printing <span class="main__form-span">60%</span></label>
 
@@ -75,32 +75,56 @@
                 <input class="main__form-check hidden" type="radio" name="option" value="3d" id="3d">
                 <label class="main__form-radio" for="3d">3D</label>
             </div>
-            <div class="row">
-                <label for="selectSubCategory">Sub-category</label>
-                <label for="selectSize">Size</label>
-                <label for="selectMaterial">Material</label>
-                <label for="selectFinish">Finish</label>
-                <label for="selectMore">More</label>
+            <div class="margin25">
+                <div class="main__form-select">
+                    <label for="selectSubCategory">Sub-category</label>
+                    <select id="selectSubCategory">
+                        <option value="booklets">Booklets</option>
+                        <option value="book">Book</option>
+                    </select>
+                </div>
+                <div class="main__form-select">
+                    <label for="selectSize">Size</label>
+                    <select id="selectSize">
+                        <option value="size1">1x1</option>
+                        <option value="size2">2x2</option>
+                    </select>
+                </div>
+                <div class="main__form-select">
+                    <label for="selectMaterial">Material</label>
+                    <select id="selectMaterial">
+                        <option value="100pt">100pt gloss book</option>
+                        <option value="200pt">200pt gloss book</option>
+                    </select>
+                </div>
+                <div class="main__form-select">
+                    <label for="selectFinish">Finish</label>
+                    <select id="selectFinish">
+                        <option value="aq">Aq</option>
+                        <option value="bq">Bq</option>
+                    </select>
+                </div>
+                <div class="main__form-select">
+                    <label for="selectMore">More</label>
+                    <select id="selectMore">
+                        <option value="aq">Tri-Fold</option>
+                        <option value="bq">One-Fold</option>
+                    </select>
+                </div>
             </div>
-            <div class="row">
-                <input id="selectSubCategory" type="text" placeholder="Booklets">
-                <input id="selectSize" type="text" placeholder="1x1">
-                <input id="selectMaterial" type="text" placeholder="100pt gloss book">
-                <input id="selectFinish" type="text" placeholder="Aq">
-                <input id="selectMore" type="text" placeholder="Tri-Fold">
-            </div>
-            <div class="row">
+            <div class="main__form-result">
                 <input type="checkbox" id="result" value="result" checked>
-                <label class="" for="result">Show results in new window</label>
+                <label for="result">Show results in new window</label>
             </div>
-            <div class="row">
-                <button class="main__form-scanning" type="submit">Find variants<img class="main__form-sweep" src="img/paper-plane.svg"></button>
+            <div>
+                <button class="main__form-scanning" type="submit">Find variants<img class="main__form-sweep"
+                                                                                    src="img/paper-plane.svg">
+                </button>
             </div>
         </form>
     </div>
 </section>
-
 <script src="js/scripts.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="libs/combobox/jquery.scombobox.min.js"></script>
 </body>
 </html>

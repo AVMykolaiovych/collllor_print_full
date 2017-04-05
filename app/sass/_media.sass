@@ -5,10 +5,14 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
+	.main
+		margin-top: 20vh
 	/**/
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+	.main
+		margin-top: 15vh
 	/**/
 
 /* Small Devices, Tablets */
@@ -36,13 +40,40 @@
 				display: none
 		&__link
 			margin-left: 0
-
+	.main
+		margin-top: 10vh
+		&__form
+			&-radio
+				padding: 8px
+			&-select
+				width: 80%
+			&-scanning
+				line-height: 35px
+	.scombobox
+		margin-right: -2px
+	.scombobox-display
+		padding: 10px
+	.scombobox-list p
+		padding: 10px
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
 	body
 		font-size: 12px
+	.margin25
+		margin-top: 10px
+	.main
+		&__form
+			padding-top: 10px
+			&-radio
+				display: block
+				margin-top: 10px
+				border-radius: 50px 50px 50px 50px
+				&:first-of-type
+					border-radius: 50px 50px 50px 50px
+				&:last-of-type
+					border-radius: 50px 50px 50px 50px
 	/**/
 
 /* Custom, iPhone Retina */
